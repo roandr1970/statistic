@@ -36,20 +36,12 @@ public class StatsService {
     }
 
     public long average(long[] sales) {
-        long salesAmount = 0;
-        for (long sale : sales) {
-            salesAmount += sale;
-        }
-        long average = salesAmount / sales.length;
+        long average = salesAmount(sales) / sales.length;
         return average;
     }
 
     public long belowAverage(long[] sales) {
-        long salesAmount = 0;
-        for (long sale : sales) {
-            salesAmount += sale;
-        }
-        long average = salesAmount / sales.length;
+        long average = salesAmount(sales) / sales.length;
         int counter = 0;
         for (long sale : sales) {
             if (sale < average) {
@@ -60,11 +52,7 @@ public class StatsService {
     }
 
     public long aboveAverage(long[] sales) {
-        long salesAmount = 0;
-        for (long sale : sales) {
-            salesAmount += sale;
-        }
-        long average = salesAmount / sales.length;
+        long average = salesAmount(sales) / sales.length;
         int counter = 0;
         for (long sale : sales) {
             if (sale > average) {
